@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import { gotSearchTerm } from '../Redux/reducers'
+import { getSearchResults } from '../Redux/reducers'
 
 class UserInput extends React.Component {
   constructor(props){
@@ -16,17 +16,19 @@ class UserInput extends React.Component {
     
   handleSubmit = (event) => {
     event.preventDefault()
-    this.props.gotSearchTerm(this.state.userSearchQuery)
+    this.props.getSearchResults(this.state.userSearchQuery)
   }
 
   render() {
     return (
-      <form onSubmit={this.handleSubmit}>
-        <label>
+      <form onSubmit={this.handleSubmit} class="user-input">
+        <label >
             <br />
             Search: <input type="text" value={this.state.userSearchQuery} onChange={this.handleChange} />
-        </label>
+        </label> 
         <input class="button" type="submit" value="Submit" />
+        <br />
+        <br />
       </form>
     )
   }
@@ -40,7 +42,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  gotSearchTerm: (searchTerm) => dispatch(gotSearchTerm(searchTerm)),
+  getSearchResults: (searchTerm) => dispatch(getSearchResults(searchTerm)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserInput)

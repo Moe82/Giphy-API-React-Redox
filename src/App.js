@@ -1,7 +1,5 @@
-import { Component } from 'react';
 import './App.css';
 import React from 'react';
-import { connect } from 'react-redux';
 
 // components 
 import UserInput from './Components/UserInput'
