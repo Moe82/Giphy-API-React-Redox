@@ -1,20 +1,20 @@
 {
   "files": {
-    "main.css": "/Giphy-API-React-Redox/static/css/main.99702d0b.chunk.css",
-    "main.js": "/Giphy-API-React-Redox/static/js/main.8637f978.chunk.js",
-    "main.js.map": "/Giphy-API-React-Redox/static/js/main.8637f978.chunk.js.map",
-    "runtime-main.js": "/Giphy-API-React-Redox/static/js/runtime-main.021ad41a.js",
-    "runtime-main.js.map": "/Giphy-API-React-Redox/static/js/runtime-main.021ad41a.js.map",
-    "static/js/2.c6cefe25.chunk.js": "/Giphy-API-React-Redox/static/js/2.c6cefe25.chunk.js",
-    "static/js/2.c6cefe25.chunk.js.map": "/Giphy-API-React-Redox/static/js/2.c6cefe25.chunk.js.map",
-    "static/js/3.c5ba66b7.chunk.js": "/Giphy-API-React-Redox/static/js/3.c5ba66b7.chunk.js",
-    "static/js/3.c5ba66b7.chunk.js.map": "/Giphy-API-React-Redox/static/js/3.c5ba66b7.chunk.js.map",
-    "index.html": "/Giphy-API-React-Redox/index.html",
-    "static/css/main.99702d0b.chunk.css.map": "/Giphy-API-React-Redox/static/css/main.99702d0b.chunk.css.map",
-    "static/js/2.c6cefe25.chunk.js.LICENSE.txt": "/Giphy-API-React-Redox/static/js/2.c6cefe25.chunk.js.LICENSE.txt"
+    "main.css": "/Moe82/Giphy-API-React-Redox.git/static/css/main.99702d0b.chunk.css",
+    "main.js": "/Moe82/Giphy-API-React-Redox.git/static/js/main.8637f978.chunk.js",
+    "main.js.map": "/Moe82/Giphy-API-React-Redox.git/static/js/main.8637f978.chunk.js.map",
+    "runtime-main.js": "/Moe82/Giphy-API-React-Redox.git/static/js/runtime-main.d1fc71fe.js",
+    "runtime-main.js.map": "/Moe82/Giphy-API-React-Redox.git/static/js/runtime-main.d1fc71fe.js.map",
+    "static/js/2.c6cefe25.chunk.js": "/Moe82/Giphy-API-React-Redox.git/static/js/2.c6cefe25.chunk.js",
+    "static/js/2.c6cefe25.chunk.js.map": "/Moe82/Giphy-API-React-Redox.git/static/js/2.c6cefe25.chunk.js.map",
+    "static/js/3.c5ba66b7.chunk.js": "/Moe82/Giphy-API-React-Redox.git/static/js/3.c5ba66b7.chunk.js",
+    "static/js/3.c5ba66b7.chunk.js.map": "/Moe82/Giphy-API-React-Redox.git/static/js/3.c5ba66b7.chunk.js.map",
+    "index.html": "/Moe82/Giphy-API-React-Redox.git/index.html",
+    "static/css/main.99702d0b.chunk.css.map": "/Moe82/Giphy-API-React-Redox.git/static/css/main.99702d0b.chunk.css.map",
+    "static/js/2.c6cefe25.chunk.js.LICENSE.txt": "/Moe82/Giphy-API-React-Redox.git/static/js/2.c6cefe25.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
-    "static/js/runtime-main.021ad41a.js",
+    "static/js/runtime-main.d1fc71fe.js",
     "static/js/2.c6cefe25.chunk.js",
     "static/css/main.99702d0b.chunk.css",
     "static/js/main.8637f978.chunk.js"
