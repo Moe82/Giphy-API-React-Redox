@@ -1,10 +1,9 @@
-import axios from 'axios';
-
 //Action Types
-import { GOT_USER_SEARCH_QUERY , GOT_SEARCH_RESULTS} from './actionTypes';
+import { GOT_USER_SEARCH_QUERY , GOT_TRENDING_GIFS} from './actionTypes';
 
 const initialState = {
-  userSearchQuery: ""
+  userSearchQuery: "",
+  trendingGifs: []
 }
 
 //Action creaters 
@@ -15,15 +14,30 @@ export const gotSearchTerm = (searchTerm) => {
   }
 }
 
+export const gotTrendingGifs = (trendingGifs) => {
+  return {
+    type: GOT_TRENDING_GIFS,
+    payload: trendingGifs
+  }
+}
+
+//Root reducer
 const rootReducer = (state = initialState, action) => {  
   switch (action.type) {
+    case GOT_TRENDING_GIFS:
+      return {...state, trendingGifs: action.payload}
     case GOT_USER_SEARCH_QUERY:
       return {...state, userSearchQuery: action.payload} 
-    case GOT_SEARCH_RESULTS:
-      return ""
     default:
       return state
   }
-};
+}
 
 export default rootReducer;
+
+
+
+
+
+
+

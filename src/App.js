@@ -4,32 +4,16 @@ import React from 'react';
 import { connect } from 'react-redux';
 
 // components 
-import Input from './Components/UserInput'
+import UserInput from './Components/UserInput'
+import GifDisplay from './Components/GifDisplay'
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      userSearchQuery: ""
-    }
-  }
-
+ export default class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <Input searchTerm={this.state.searchTerm}/>
-        {/* {this.props.userSearchQuery} */}
+        <UserInput />
+        <GifDisplay />
       </div>
     );
   }
 }
-
-const mapStateToProps = (state) => {
-  return {
-    userSearchQuery: state.userSearchQuery
-  }
-}
-
-const mapDispatchToProps = (dispatch) => ({});
-
-export default connect(mapStateToProps, mapDispatchToProps)(App);

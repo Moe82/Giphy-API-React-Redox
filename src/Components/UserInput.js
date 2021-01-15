@@ -10,26 +10,27 @@ class UserInput extends React.Component {
     }
   }
   
-    handleChange = (event) => {
-        this.setState({userSearchQuery: event.target.value});
-    }
-    
-    handleSubmit = (event) => {
-      event.preventDefault()
-      this.props.gotSearchTerm(this.state.userSearchQuery)
-    }
-
-    render() {
-      return (
-        <form onSubmit={this.handleSubmit}>
-          <label>
-            Search Term: <input type="text" value={this.state.userSearchQuery} onChange={this.handleChange} />
-          </label>
-          <input type="submit" value="Submit" />
-        </form>
-      )
-    }
+  handleChange = (event) => {
+      this.setState({userSearchQuery: event.target.value});
   }
+    
+  handleSubmit = (event) => {
+    event.preventDefault()
+    this.props.gotSearchTerm(this.state.userSearchQuery)
+  }
+
+  render() {
+    return (
+      <form onSubmit={this.handleSubmit}>
+        <label>
+            <br />
+            Search: <input type="text" value={this.state.userSearchQuery} onChange={this.handleChange} />
+        </label>
+        <input class="button" type="submit" value="Submit" />
+      </form>
+    )
+  }
+}
 
 
 const mapStateToProps = (state) => {
@@ -37,6 +38,7 @@ const mapStateToProps = (state) => {
     userSearchQuery: state.userSearchQuery
   }
 }
+
 const mapDispatchToProps = (dispatch) => ({
   gotSearchTerm: (searchTerm) => dispatch(gotSearchTerm(searchTerm)),
 })
