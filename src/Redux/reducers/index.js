@@ -24,10 +24,12 @@ const gotSearchResults = (payload) => ({
   payload: payload
 })
 
-export const getSearchResults = (searchTerm) => {
+export const getSearchResults = (searchTerm, rating, language) => {
   return async (dispatch) => {
     try {
-      const response = await axios.get('https://api.giphy.com/v1/gifs/search?api_key=' + API_KEY + '&limit=25' + '&q=' + searchTerm);
+      let url = 'https://api.giphy.com/v1/gifs/search?api_key=' + API_KEY + '&limit=25' + '&q=' + searchTerm + '&rating=' + rating + '&lang=' + language
+      console.log(url)
+      const response = await axios.get(url);
       let searchResults = [] 
       for (let gif of response.data.data){
         searchResults.push(gif.images.downsized.url)

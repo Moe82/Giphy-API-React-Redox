@@ -6,34 +6,51 @@ class UserInput extends React.Component {
   constructor(props){
     super(props)
     this.state = {
-      userSearchQuery: ""
+      userSearchQuery: "",
+      rating: "g",
+      language:"en"
     }
   }
   
-  handleChange = (event) => {
-      this.setState({userSearchQuery: event.target.value});
-  }
     
   handleSubmit = (event) => {
+    console.log(this.state.rating)
     event.preventDefault()
-    this.props.getSearchResults(this.state.userSearchQuery)
+    this.props.getSearchResults(this.state.userSearchQuery, this.state.rating, this.state.language)
   }
 
+  handleChange = (event) => {
+    this.setState({
+      [event.target.name]: event.target.value
+    })
+  }
+    
   render() {
     return (
       <form onSubmit={this.handleSubmit} class="user-input">
         <label >
             <br />
-            Search: <input type="text" value={this.state.userSearchQuery} onChange={this.handleChange} />
-        </label> 
+            Search: <input name="userSearchQuery" type="text" value={this.state.userSearchQuery} onChange={this.handleChange} />
+        </label>  <br />
+        Rating: <select name='rating' value={this.state.rating} onChange={this.handleChange}>
+          <option value="g">g</option>
+          <option value="pg">pg</option>
+          <option value='pg-13'>pg-13</option>
+          <option value="r">r</option>
+        </select> <br />
+        Language: <select name='language' value={this.state.language} onChange={this.handleChange}>
+          <option value="en">English</option>
+          <option value="ar">Arabic</option>
+          <option value="ru">Russian</option>
+          <option value="hi">Hindi</option>
+          <option value="th">Thai</option>
+          <option value="pt">Portuguese</option>
+        </select> <br /> <br />
         <input class="button" type="submit" value="Submit" />
-        <br />
-        <br />
       </form>
     )
   }
 }
-
 
 const mapStateToProps = (state) => {
   return {
@@ -42,7 +59,8 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-  getSearchResults: (searchTerm) => dispatch(getSearchResults(searchTerm)),
+  getSearchResults: (searchTerm, rating, language) => dispatch(getSearchResults(searchTerm, rating, language)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(UserInput)
+

@@ -9,7 +9,7 @@ import GifDisplay from './Components/GifDisplay'
   render() {
     return (
       <div className="App">
-        <UserInput />
+        <UserInput /> <br />
         <GifDisplay />
       </div>
     );
